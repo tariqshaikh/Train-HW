@@ -18,7 +18,6 @@ var database = firebase.database();
   var trainFrequency = $("#trainFrequency").val().trim();
   var trainTime = $("#trainTime").val().trim();
 
-  //onclick for submit
   database.ref().push({
       trainName: trainName,
       trainDestination: trainDestination,
@@ -33,8 +32,6 @@ database.ref().on("child_added", function(snapshot){
 
   var item = snapshot.val()
 
-  console.log(snapshot.val());
-
 
   var trainName = item.trainName
   var trainDestination = item.trainDestination
@@ -42,9 +39,6 @@ database.ref().on("child_added", function(snapshot){
   var trainTime = item.trainTime
   var date = moment(trainTime, "hh:mm").format("hh:mm A")
   var now = moment();
-
-
-  console.log(date)
 
   var row = $("<tr>")
     var trainNameTd = $("<td>")
@@ -62,10 +56,6 @@ database.ref().on("child_added", function(snapshot){
 
   row.append(trainNameTd, trainDestinationTd, trainFrequencyTd, trainTimeTd)
   $("#trainTable").append(row);
-  
-  
-
-})
 
 
 });
