@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Hw</title>
+
+		<!-- BootStrap -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- JQuery -->
+			<script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+		<!--Css + JavaScript-->
+			<script src = "assets/javascript/app.js"></script>
+			<link rel = "stylesheet" type= "text/css" href = "assets/css/style.css">			
+
+		<!--FireBase-->		
+			<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+	
+		<!--Google Fonts-->		
+			<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+</head>
+<body>
+	<!--Jumbotron-->
+	<div class="container-fluid">
+		<div class="jumbotron" id="jumbotron">
+			<h1>New Jersey Rail Express</h1>
+	</div>	
+
+	<!--Panels-->
+	<div class="container">
+		<div class="panel panel-info">
+				<div class="panel-heading" id="panel1">Current Train Schedule</div>
+				<table class="table table-striped" id="panel1">
+					 <th>Train Name</th>
+       				 <th>Destination</th>
+       				 <th>Frequency (Min)</th>
+       				 <th>Next Arriving Train</th>
+       				 <th>Minutes Away</th>
+       			 </table>	 
+		</div>		
+	</div>
+
+	<!--Add Train-->
+		<div class="container">
+	   		<div class="panel panel-info">
+    			<div class = "panel-heading" id="panel1">Add Train</div>
+   					 <div class = "panel-body">
+    					  <form>
+           					 <div class="form-group">
+            					 <label for="trainName" id="panel1">Train Name</label>
+             					 <input type="text" class="form-control" id="trainName">
+           					 </div>
+           					 <div class="form-group">
+             					 <label for="trainDestination" id="panel1">Destination</label>
+             					 <input type="text" class="form-control" id="trainDestination">
+          					 </div>  
+
+           					 <div class="form-group">
+            				     <label for="trainFrequency" id="panel1">Frequency</label>
+            				     <input type="number" class="form-control" id="trainFrequency">
+            				 </div> 
+            				 <div class="form-group">
+              					 <label for="trainTime" id="panel1">Next Arrival</label>
+              					 <input type="time" class="form-control" id="trainTime">
+         				     </div> 
+
+          				  <button id="submit" type="submit" class="btn btn-info">Submit</button>
+         					 </form>
+   					</div>
+   				</div>
+			</div>
+		</div>
+
+
+</body>
+</html>
